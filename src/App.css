@@ -1,0 +1,47 @@
+.brand-text-green {
+  color: #0de3a9ff !important;
+}
+
+.brand-text-black {
+  color: #010c09ff !important;
+}
+
+.brand-bg-black {
+  /* background-color: #010c09ff !important; */
+  background-color: #2e2f2f !important;
+}
+
+.brand-bg-green {
+  background-color: #0de3a9ff !important;
+}
+
+.brand-bg-green-clip {
+  background-color: #0de3a9ff !important;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 50%);
+}
+
+.brand-bg-green-defintion {
+  background-color: #0de3a9ff !important;
+  clip-path: polygon(0 0, 91% 10%, 65% 100%, 0% 100%);
+}
+
+.know-more-btn {
+  color: #fff !important;
+  padding: 0.5rem 1.8rem !important;
+  border: 5px solid #0de3a9ff !important;
+  border-radius: 14px !important;
+  background-color: transparent !important;
+}
+
+.border-green {
+  border: 3px solid #0de3a9ff !important;
+  border-color: #0de3a9ff !important;
+}
+
+.borderbottom {
+  border-bottom: 5px solid #0de3a9ff !important;
+}
+
+.line-height {
+  line-height: 3 !important;
+}
