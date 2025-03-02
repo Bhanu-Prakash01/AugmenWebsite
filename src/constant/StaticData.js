@@ -6,7 +6,7 @@ const STATIC_DATA = {
     COURSE_SECTION: [
         {
             title: "Future Inventor Lab",
-            description: "We provide Robotics, IoT, AR, and Coding 'Future Inventor Lab' for schools from Class 1 to 12.",
+            description: "We provide Robotics, IoT, AR, and Coding \"Future Inventor Lab\" for schools from Class 1 to 12.",
             image: settingsImg,
             redirect: "",
             buttonText: "Know More"
