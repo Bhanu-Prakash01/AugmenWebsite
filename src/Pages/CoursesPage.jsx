@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/Logo.png'
+import Header from '../components/Header'
 import duoColorLogo from '../assets/duoColorLogo.png'
 import FutureInventors from '../components/FutureInventors'
 import Footer from '../components/Footer'
@@ -20,34 +20,26 @@ const CoursesPage = () => {
     return (
         <>
             <div className="container-fluid brand-bg-black p-0 m-0">
-                <div className="row mx-0">
-                         <div className="col-10 ">
-                           {/* <h1 className='brand-text-green'>Augmen homepage</h1> */}
-                           <img src={logo} alt="" width={110} height={110} className='border-green rounded-circle mt-4 mx-4' />
-                         </div>
-                         <div className="col-2 d-flex justify-content-center align-items-center gap-4">
-                         <Link to="/" className='text-decoration-none'><h5 className='brand-text-green fw-bold'>Home</h5></Link>
-                           <Link to="/about-us" className='text-decoration-none'><h5 className='brand-text-green fw-bold'>About Us</h5></Link>
-                         </div>
-                       </div>
+                <Header />
+
                 <div className="row mx-0 d-flex justify-content-center">
-                    <div className="col-7 borderbottom">
+                    <div className="col-lg-7 col-11 borderbottom">
                         <h1 className='display-1 fw-bold brand-text-black text-center mb-4'>AUGMEN LEARNING'S</h1>
                     </div>
                 </div>
 
-                <div className="row mx-0 d-flex justify-content-center my-5 mx-5">
-                    <div className="col-8 borderbottom d-flex justify-content-around ">
+                <div className="row mx-0 d-flex justify-content-center my-5 mx-lg-5 mx-0">
+                    <div className="col-lg-8 col-md-11 col-12 borderbottom d-flex justify-content-around ">
 
 
-                        <div className="col-4">
-                            <img src={duoColorLogo} alt="" width={300} height={320} />
+                        <div className="col-lg-4 col-3">
+                            <img src={duoColorLogo} alt="" width={300} height={320} className='img-fluid' />
                         </div>
-                        <div className="col-3 d-flex flex-column justify-content-center" >
-                            <h3 className='fw-bold brand-text-green line-height'>- Beginner</h3>
-                            <h3 className='fw-bold text-white line-height'>-Professional</h3>
+                        <div className="col-lg-3 col-4 d-flex flex-column justify-content-center" >
+                            <h3 className='fw-bold brand-text-green line-height'>Beginner</h3>
+                            <h3 className='fw-bold text-white line-height'>Professional</h3>
                         </div>
-                        <div className="col-2 d-flex flex-column justify-content-center">
+                        <div className="col-lg-2 col-4 d-flex flex-column justify-content-center">
                             <h3 className='fw-bold brand-text-green'>With Us
                                 Anybody Can
                                 Become
@@ -59,13 +51,21 @@ const CoursesPage = () => {
 
                 <div className="row mx-0 d-flex justify-content-center mt-4">
                     {STATIC_DATA.COURSE_SECTION.map((item, index) => (
-                        <div key={index} className="col-10 d-flex justify-content-between gap-2 mb-4">
-                            <div className='col-2 border-green p-4 text-white rounded-4'>
-                                <img src={item.image} alt={item.title} width={170} height={150}  style={{ filter: "invert(100%) brightness(200%)" }}  />
+                        <div key={index} className="col-10 d-flex justify-content-between gap-2 mb-4 align-items-start">
+                            <div className='col-lg-2 col-4 border-green p-4 text-white rounded-4'>
+                                <img className='img-fluid' src={item.image} alt={item.title} width={170} height={150} style={{ filter: "invert(100%) brightness(200%)" }} />
                             </div>
                             <div className='col-9'>
                                 <h1 className='fw-bold brand-text-green'>{item.title}</h1>
-                                <h4 className='text-white mb-5'>{item.description}</h4>
+                                {/* <h4 className='text-white mb-5'>{item.description}</h4> */}
+                                <h4 className='text-white mb-5' 
+                    dangerouslySetInnerHTML={{ 
+                        __html: item.description.replace(
+                            "Future Inventor Lab", 
+                            `<span class="brand-text-green">"Future Inventor Lab"</span>`
+                        ) 
+                    }}
+                />
                                 <Link to={item.redirect} className="know-more-btn text-decoration-none text-end fs-4">{item.buttonText}</Link>
                             </div>
                         </div>
@@ -96,16 +96,10 @@ const CoursesPage = () => {
                             <h2 className="fw-bold text-white p-3">Info Page :</h2>
                         </div>
 
-                        <div className="position-absolute start-50 top-50 translate-middle text-white text-justify z-1"
-                            // style={{
-                            //     zIndex: 1,
-                            //     top: "90%",
-                            //     left: "50%",
-                            //     transform: "translate(-50%, -50%)"
+                        <div className="col-10 col-lg-6 position-absolute start-50 top-50 translate-middle text-white text-justify z-1"
 
-                            // }}
                         >
-                            <h4 className=" text-white" style={{lineHeight:"35px"}}>
+                            <h4 className="sub-text-responsive text-white" style={{}}>
                                 In today’s rapidly evolving technological landscape, it is
                                 crucial for students to develop skills in robotics, coding,
                                 artificial intelligence (AI), augmented reality (AR), and the
@@ -191,10 +185,10 @@ const CoursesPage = () => {
                         </ul>
                     </div>
                     <div className="col-10 mt-3">
-                        <img src={benefits1} alt="" width={1400} height={700} className='img-fluid'/>
+                        <img src={benefits1} alt="" width={1400} height={700} className='img-fluid' />
                     </div>
                     <div className="col-10">
-                        <img src={benefits2} alt="" width={1400} height={700} className='img-fluid'/>
+                        <img src={benefits2} alt="" width={1400} height={700} className='img-fluid' />
                     </div>
                 </div>
 
