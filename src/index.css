@@ -1,0 +1,35 @@
+.text-responsive {
+    font-size: 4rem !important; /* Default size for small screens */
+}
+.sub-text-responsive{
+    font-size: 1rem !important; /* Default size for small screens */
+    line-height: 1.2rem !important;
+}
+/* Medium screens (≥768px) */
+@media (min-width: 768px) {
+    .text-responsive {
+        font-size: 5.25rem !important;
+    }
+}
+
+/* Large screens (≥992px) */
+@media (min-width: 992px) {
+    .text-responsive {
+        font-size: 6.75rem !important;
+    }
+    .sub-text-responsive{
+        font-size: 1.7rem !important; /* Default size for small screens */
+        line-height: 35px !important;
+    }
+}
+
+/* Extra large screens (≥1200px) */
+@media (min-width: 1200px) {
+    .text-responsive {
+        font-size: 6.75rem !important;
+    }
+    .sub-text-responsive{
+        font-size: 1.7rem !important; /* Default size for small screens */
+        line-height: 35px !important;
+    }
+}

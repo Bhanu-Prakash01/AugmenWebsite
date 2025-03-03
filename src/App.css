@@ -1,3 +1,8 @@
+
+.fs-3rem {
+  font-size: 3rem !important;
+}
+
 .brand-text-green {
   color: #0de3a9ff !important;
 }
@@ -8,7 +13,8 @@
 
 .brand-bg-black {
   /* background-color: #010c09ff !important; */
-  background-color: #2e2f2f !important;
+  /* background-color: rgba(0, 0, 0, .2); */
+  background-color: #252727 !important;
 }
 
 .brand-bg-green {
