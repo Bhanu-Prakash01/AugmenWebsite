@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import logo from "../assets/logo.png"; // Update path as needed
+import logo from "../assets/Logo.png"; // Update path as needed
 
 const Header = () => {
     const location = useLocation(); // Get current route
